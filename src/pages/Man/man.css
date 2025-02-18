@@ -1,0 +1,12 @@
+.container {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  background-color: white;
+}
+
+.all {
+  margin-top: 200px;
+
+}

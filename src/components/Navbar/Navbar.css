@@ -1,0 +1,121 @@
+.navbar-container {
+  margin-bottom: 40px;
+}
+/* Basic Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  /* margin-right: 10px; */
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* position: fixed; */
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #6a5acd;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  z-index: 9999;
+  margin-right: 40px;
+}
+
+.nav-links li {
+  font-size: 16px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: #e6e6fa;
+}
+
+.nav-links a:active {
+  background: #d8bfd8;
+}
+
+.nav-links .active {
+  color: #6a5acd;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.nav-links a:active {
+  background: #d8c8bf;
+}
+
+.nav-links .active {
+  color: rgb(0, 162, 255) !important;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  /* z-index: 9; */
+}
+
+/* Responsive - Small Screens */
+@media (max-width: 768px) {
+ .menu-icon {
+    display: block !important; /* Ensure it's visible */
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    z-index: 1000;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: white;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-links li {
+    margin: 10px 10px;
+  }
+
+  /* Adjust hover for mobile */
+  .nav-links a:hover,
+  .nav-links a:active {
+    background: #d8bfd8;
+  }
+}
